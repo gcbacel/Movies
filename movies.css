@@ -1,0 +1,18 @@
+.rateitems {
+   padding-left: 5px; 
+   height: 480px;
+   overflow-y: scroll;
+}
+
+.border-box {
+   padding: 5px;
+}
+
+.btn-warning {
+   color: white; 
+   font-size: 120%;
+}
+
+.suggestionitems {
+   color: green;
+}
