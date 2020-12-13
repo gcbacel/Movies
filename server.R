@@ -23,8 +23,8 @@ predict_top_movies = function(input_ratings) {
 }
 
 myurl = "https://raw.githubusercontent.com/gcbacel/Movies/main/"
-avg_rating = read.csv(paste0(myurl, "Data/avg_rating.csv"))
-movies = readLines(paste0(myurl, "Data/movies.dat"))
+avg_rating = read.csv(paste0(myurl, "avg_rating.csv"))
+movies = readLines(paste0(myurl, "movies.dat"))
 movies = strsplit(movies, split = "::", fixed = TRUE, useBytes = TRUE)
 movies = matrix(unlist(movies), ncol = 3, byrow = TRUE)
 movies = data.frame(movies, stringsAsFactors = FALSE)
@@ -42,7 +42,7 @@ movies$image_url = sapply(movies$MovieID,
 
 rating_matrix = data.table(matrix(rep(NA,nrow(movies)), nrow = 1))
 colnames(rating_matrix) =paste0("i", avg_rating$MovieID)
-modelubcf = readRDS(gzcon(url(paste0(myurl, "Data/modelubcf.rds"))))
+modelubcf = readRDS(gzcon(url(paste0(myurl, "modelubcf.rds"))))
 
 shinyServer(function(input, output, session) {
     

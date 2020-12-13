@@ -8,7 +8,7 @@ library(shinyjs)
 library(dplyr)
 library(stringr)
 
-source('functions/helpers.R')
+source('helpers.R')
 genrelist = c("Animation","Children's","Comedy","Adventure","Fantasy","Romance","Drama","Action","Crime",
               "Thriller","Horror","Sci-Fi","War","Musical","Documentary","Mystery","Film-Noir","Western") 
 
@@ -19,7 +19,7 @@ shinyUI(
           
           dashboardSidebar(disable = TRUE),
 
-          dashboardBody(includeCSS("css/movies.css"),
+          dashboardBody(includeCSS("movies.css"),
 
                         
               fluidRow(
