@@ -1,6 +1,6 @@
 This shiny movie recommendation App is published at:
 
-- https://gunther-bacellar.shinyapps.io/MovieRecommender
+- https://gunther-bacellar.shinyapps.io/ShinyApp
 
 The code for this App is available in my github at:
 - https://github.com/gcbacel/Movies
